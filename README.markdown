@@ -25,10 +25,10 @@ Then do something like this:
 
 ```java
 CardHash card = new CardHash();
-card.mHolderName = "Some Name";
-card.mNumber = "4111111111111111"; // no whitespaces
-card.mExpirationDate = "0817";
-card.mCVV = "123";
+card.holderName = "Some Name";
+card.number = "4111111111111111"; // no whitespaces
+card.expirationDate = "0817";
+card.cvv = "123";
 card.generate(context, new CardHash.Listener() {
     @Override
     public void onSucess(String cardHash) {

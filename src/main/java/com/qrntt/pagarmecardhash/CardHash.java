@@ -26,10 +26,10 @@ public class CardHash {
     private static final String API_URL = "https://api.pagar.me/1/transactions/card_hash_key";
     private static final String META_DATA_KEY = "me.pagar.EncryptionKey";
 
-    public String mHolderName;
-    public String mNumber;
-    public String mExpirationDate;
-    public String mCVV;
+    public String holderName;
+    public String number;
+    public String expirationDate;
+    public String cvv;
 
     public CardHash() {
     }
@@ -76,7 +76,7 @@ public class CardHash {
                         + "&card_holder_name=%s"
                         + "&card_expiration_date=%s"
                         + "&card_cvv=%s",
-                mNumber, mHolderName, mExpirationDate, mCVV);
+                number, holderName, expirationDate, cvv);
         final String encryptedData = encrypt(cardData, publicKey);
         return String.format("%d_%s", publicKeyId, encryptedData);
     }
